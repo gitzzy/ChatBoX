@@ -1,4 +1,3 @@
-package com.ChatBox;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;

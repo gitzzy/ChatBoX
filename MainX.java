@@ -1,5 +1,8 @@
-package com.ChatBox;
+
 import javax.swing.*;
+
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -46,6 +49,14 @@ public class MainX {
         ChatBox.add(btn);
 
         btn.addActionListener(e -> handleSendMessage());
+        tf.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    handleSendMessage();
+                }
+            }
+        });
 
         frm.setVisible(true);
 
