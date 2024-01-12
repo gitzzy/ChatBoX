@@ -1,6 +1,7 @@
 
 import javax.swing.*;
 
+import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.*;
@@ -38,6 +39,10 @@ public class MainX {
         scrollPane.setBounds(0, 50, 500, 450);
         ChatBox.add(scrollPane);
         ta.setEditable(false);
+        ta.setBackground(Color.DARK_GRAY);
+        ta.setForeground(Color.white);
+        tf.setBackground(Color.DARK_GRAY);
+        tf.setForeground(Color.white);
 
         JLabel lb = new JLabel("Server's Side");
         lb.setBounds(0, 0, 500, 50);
@@ -45,8 +50,12 @@ public class MainX {
         lb.setHorizontalAlignment(JLabel.CENTER);
 
         JButton btn = new JButton("Send -->");
+        btn.setBackground(Color.GREEN);
+        btn.setForeground(Color.green);
         btn.setBounds(400, 500, 100, 50);
+        
         ChatBox.add(btn);
+       
 
         btn.addActionListener(e -> handleSendMessage());
         tf.addKeyListener(new KeyAdapter() {
