@@ -20,7 +20,11 @@ public class MainX {
     }
 
     private static void createAndShowGUI() {
+
+ImageIcon logo = new ImageIcon("images/Logo.png");
+ImageIcon wall = new ImageIcon("images/");
         JFrame frm = new JFrame();
+        frm.setIconImage(logo.getImage());
         frm.setSize(500, 600);
         frm.setLayout(null);
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
