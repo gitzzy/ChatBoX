@@ -22,12 +22,14 @@ public class MainX {
     private static void createAndShowGUI() {
 
 ImageIcon logo = new ImageIcon("images/Logo.png");
-ImageIcon wall = new ImageIcon("images/");
+ImageIcon wall = new ImageIcon("images/wall1.jpg");
         JFrame frm = new JFrame();
         frm.setIconImage(logo.getImage());
         frm.setSize(500, 600);
         frm.setLayout(null);
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JLabel wallLabel = new JLabel(wall);
 
         JPanel ChatBox = new JPanel();
         ChatBox.setBounds(0, 0, 500, 600);
